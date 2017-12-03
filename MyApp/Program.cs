@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -19,7 +20,7 @@ namespace MyApp
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:5000/")
+                .UseUrls(Environment.GetEnvironmentVariable("ASPNETCORE_URLS") ?? "http://localhost:5000/")
                 .Build();
 
             host.Run();
