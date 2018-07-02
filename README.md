@@ -1,6 +1,6 @@
 # selfhost
 
-.NET Core 2.0 self-hosting Kestrel Console App
+.NET Core 2.1 self-hosting Kestrel Console App
 
 [![](https://raw.githubusercontent.com/ServiceStack/Assets/master/csharp-templates/selfhost.png)](http://selfhost.web-templates.io/)
 
