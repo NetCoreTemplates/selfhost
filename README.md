@@ -6,7 +6,7 @@
 
 > Browse [source code](https://github.com/NetCoreTemplates/selfhost), view live demo [selfhost.web-templates.io](http://selfhost.web-templates.io) and install with [dotnet-new](http://docs.servicestack.net/dotnet-new):
 
-    $ dotnet tool install -g web
+    $ dotnet tool install -g x
 
-    $ web new selfhost ProjectName
+    $ x new selfhost ProjectName
 
