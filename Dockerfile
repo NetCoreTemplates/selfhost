@@ -4,10 +4,10 @@ WORKDIR /source
 COPY . .
 RUN dotnet restore
 
-WORKDIR /source/selfhost
+WORKDIR /source/MyApp
 RUN dotnet publish -c release -o /app --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS runtime
 WORKDIR /app
 COPY --from=build /app ./
-ENTRYPOINT ["dotnet", "selfhost.dll"]
+ENTRYPOINT ["dotnet", "MyApp.dll"]
