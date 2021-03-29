@@ -1,13 +1,13 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
-WORKDIR /source
+WORKDIR /app
 
 COPY . .
 RUN dotnet restore
 
-WORKDIR /source/MyApp
-RUN dotnet publish -c release -o /app --no-restore
+WORKDIR /app/MyApp
+RUN dotnet publish -c release -o /out --no-restore
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS runtime
 WORKDIR /app
-COPY --from=build /app ./
+COPY --from=build /out ./
 ENTRYPOINT ["dotnet", "MyApp.dll"]
