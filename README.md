@@ -1,6 +1,6 @@
 # selfhost
 
-.NET 5.0 self-hosting Kestrel Console App
+.NET 6.0 self-hosting Kestrel Console App
 
 [![](https://raw.githubusercontent.com/ServiceStack/Assets/master/csharp-templates/selfhost.png)](http://selfhost.web-templates.io/)
 
