@@ -10,6 +10,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
     app.UseHttpsRedirection();
 }
+app.UseServiceStack(new AppHost());
+app.Run(async context => context.Response.Redirect("/metadata"));
 
 app.Run();
 
